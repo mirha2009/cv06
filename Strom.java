@@ -2,15 +2,13 @@ public class Strom {
 
 	Vrchol root;
 	Vrchol previous;
-	Vrchol a;
-	Vrchol b;
 
 	public Strom() {
 		root = null;
 	}
 
 	void vloz(int klic) {
-		 a = root;
+		Vrchol a = root;
 		previous = null;
 		while (a != null) {//hleda sparavne misto pro vlozeni prvku, pokud jiz existuje vrchol stromu
 			previous = a;//ulozi novy prvek za koren
@@ -19,7 +17,7 @@ public class Strom {
 			} else
 				a = a.left;
 		}
-		 b = new Vrchol(klic);// jedna se o prvni prvek (vrchol stromu)
+		Vrchol b = new Vrchol(klic);// jedna se o prvni prvek (vrchol stromu)
 		b.previous = previous;
 		if (previous == null) {// jedna se o prvni prvek (vrchol stromu)
 			root = b;
@@ -32,7 +30,7 @@ public class Strom {
 	 * metoda na vypsani cesty k hledanemu prvku
 	 */
 	void cesta (int klic){
-		 a = root;
+		Vrchol a = root;
 		String path = "";
 		while ((a!=null)&&(klic!=a.klic)){//pokud jiz existuje prvek ve stromu a zaroven neni stejny
 			path = path + a.klic + " ";
