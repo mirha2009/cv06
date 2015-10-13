@@ -1,5 +1,5 @@
 public class Strom {
-
+//pokus pro git
 	Vrchol root;
 	Vrchol previous;
 
